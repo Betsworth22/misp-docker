@@ -23,14 +23,14 @@ services:
       - /dev/urandom:/dev/random
       - /data/misp:/var/www/MISP
     environment:
-      - MYSQL_ROOT_PASSWORD=xxxxxxxx
-      - MYSQL_MISP_PASSWORD=xxxxxxxx
+      - MYSQL_ROOT_PASSWORD=Optiv@dm1n
+      - MYSQL_MISP_PASSWORD=Optiv@dm1n
       - MYSQL_HOST=misp-db
-      - MISP_ADMIN_EMAIL=admin@admin.test
-      - MISP_ADMIN_PASSPHRASE=xxxxxxxxx
-      - MISP_BASEURL=http:\/\/misp\.test
-      - POSTFIX_RELAY_HOST=relay.fqdn
-      - TIMEZONE=Europe/Brussels
+      - MISP_ADMIN_EMAIL=admin@optivmss.com
+      - MISP_ADMIN_PASSPHRASE=Optiv@dm1n
+      - MISP_BASEURL=http://dev-hub.aiem.portal.optivmss.com
+      - POSTFIX_RELAY_HOST=relay.aiem.portal.optivmss.com
+      - TIMEZONE=America/Chicago
 
   misp-db:
     container_name: misp-db
@@ -42,4 +42,4 @@ services:
     volumes:
       - /data/tmp/mysql:/var/lib/mysql
     environment:
-      - MYSQL_ROOT_PASSWORD=xxxxxxxx
+      - MYSQL_ROOT_PASSWORD=Optiv@dm1n
