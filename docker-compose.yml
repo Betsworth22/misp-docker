@@ -10,7 +10,6 @@ services:
     depends_on:
       - misp-db
     container_name: misp-web
-    hostname: misp
     image: misp:latest
     restart: always
     networks:
@@ -34,7 +33,6 @@ services:
 
   misp-db:
     container_name: misp-db
-    hostname: mysql
     image: mysql/mysql-server:latest
     restart: always
     networks:
